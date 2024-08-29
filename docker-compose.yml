@@ -1,0 +1,10 @@
+services:
+ measure-api:
+  build:
+   context: .
+   target: production
+  environment:
+  - GEMINI_API_KEY=${GEMINI_API_KEY}
+  - PORT=${PORT}
+  ports:
+   - 80:80

@@ -1,0 +1,28 @@
+{
+  "name": "measure_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Ramon Venson",
+  "license": "GPL-3.0-only",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.2.0",
+    "lowdb": "^7.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/lowdb": "^1.0.15",
+    "@types/node": "^22.5.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
