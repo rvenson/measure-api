@@ -17,7 +17,7 @@ class App {
   }
 
   private routes(): void {
-    this.app.use('/api', routes);
+    this.app.use('/', routes);
   }
 
   private errorHandling(): void {
