@@ -5,6 +5,6 @@ services:
    target: production
   environment:
   - GEMINI_API_KEY=${GEMINI_API_KEY}
-  - PORT=${PORT}
+  - PORT=${PORT:-80}
   ports:
-   - 80:80
+   - ${PORT:-80}:${PORT:-80}
