@@ -23,7 +23,7 @@ class AiServiceImpl implements AiService {
     }
     const result = await this.model.generateContent([image, prompt]);
     const estimated_value = result.response.text()
-    return await Number.parseFloat(estimated_value);
+    return Number.parseFloat(estimated_value);
   }
 }
 
