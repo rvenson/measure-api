@@ -1,13 +1,13 @@
 
 # Measure API
 
-This project  is a simple API for reading meter readings using Gemini API.
+This project is a simple API for reading meter readings using Gemini API.
 
 ## Features
 
 - Uses Gemini API to read meter readings
-- Store and list readings for each customer
-- Confirm the AI readings manually
+- Stores and list readings for each customer
+- Confirms the AI readings manually
 
 ### To be added
 
@@ -18,15 +18,15 @@ This project  is a simple API for reading meter readings using Gemini API.
 
 ### Environment Variables
 
-`PORT` - The port to run the server on
-`GEMINI_API_KEY` - The API key for Gemini
+* `PORT` - The port to run the server on
+* `GEMINI_API_KEY` - The API key for Gemini
 
 ### Local (development)
 
 Run the following command to start the server:
 
 ```bash
-npm run dev
+PORT=80 GEMINI_API_KEY=<yourapikeyhere> npm run dev
 ```
 
 ### Docker (production)
@@ -34,14 +34,14 @@ npm run dev
 Run the following command to build and run the Docker container using Docker Compose:
 
 ```bash
-docker compose up --build
+PORT=80 GEMINI_API_KEY=<yourapikeyhere> docker compose up --build
 ```
 
 ## Routes
 
 ### Upload
 
-`POST /api/upload` - Send a base64 image containing a meter for reading
+`POST /upload` - Send a base64 image containing a meter for reading
 
 #### Example Request
 ````json
@@ -64,7 +64,7 @@ docker compose up --build
 
 ### Confirm
 
-`PATCH /api/confirm` - Confirms the estimated value a measure
+`PATCH /confirm` - Confirms the estimated value a measure
 
 #### Example Request
 ````json
@@ -83,7 +83,7 @@ docker compose up --build
 
 ### List
 
-`GET /api/:customerCode/list` - Get a list of measures for a customer
+`GET /:customerCode/list` - Get a list of measures for a customer
 
 #### Example Response
 ````json
